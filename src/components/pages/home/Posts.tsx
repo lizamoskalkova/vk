@@ -10,12 +10,14 @@ interface IPosts {
 
 
 const Posts: FC<IPosts> = ({posts}) => {
-  return <>{posts.map(post => (
+  return <>{posts.map((post,idx) => (
     <Box sx ={{
         border: '1px solid #ccc',
         borderRadius: '10px',
         padding: 2,
+        marginTop: 5
     }}
+        key = {`Post - ${idx}`}
     >
         <Link 
                 key = {post.author._id}
@@ -40,8 +42,9 @@ const Posts: FC<IPosts> = ({posts}) => {
                          sx = {{width: 46, height: 46}}/>
                     </Box>
                     <div>
-                    <span style = {{fontSize: 14.5, fontFamily: 'Verdana'}}>{post.author.name}</span> 
-                    <span style = {{fontSize: 14.5, opacity: '0.6'}}>{post.createdAt}</span> 
+                    <div style = {{fontSize: 14.5, fontFamily: 'Verdana'}}>{post.author.name}</div> 
+                    
+                    <div style = {{fontSize: 14.5, opacity: '0.6'}}>{post.createdAt}</div> 
                     </div>
                 </Link>
                 <p>{post.content} </p>

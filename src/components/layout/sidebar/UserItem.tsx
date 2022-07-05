@@ -6,33 +6,9 @@ import { Card } from '@mui/material';
 import { Avatar } from '@mui/material';
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
 import {QuestionAnswer} from '@mui/icons-material';
+import { IUser } from '../../../types';
+import { users } from './dataUsers';
 
-const users = [
-    {
-        avatar: 'https://yt3.ggpht.com/HJja4fRDTqAovm9EJXCf6TR18MdXmYQ-6lSk7dgtwa6EG05cqx2Ssef-fV1tod8fklXOWmSM=s900-c-k-c0x00ffffff-no-rj',
-        name: 'Liza Moskalkova',
-        isInNetwork: false,
-        _id: 'a',
-    },
-    {
-        avatar: '',
-        name: 'Masha Moskalkova',
-        isInNetwork: false,
-        _id: 'sa',
-    },
-    {
-        avatar: 'https://mir-s3-cdn-cf.behance.net/user/276/6dbcd7194160285.5eb049203363a.png',
-        name: 'Anna Moskalkova',
-        isInNetwork: true,
-        _id: 'af',
-    },
-    {
-        avatar: '',
-        name: 'Ella Moskalkova',
-        isInNetwork: false,
-        _id: 'ad',
-    }
-]
 
 
 const UserItems = () => {
@@ -59,7 +35,7 @@ const UserItems = () => {
                     marginBottom: 4}}>
                     <Box sx = {{
                     position: 'relative', 
-                    marginRight: 2, 
+                    marginRight: 3, 
                     width: 50,
                     height: 50}}>
                      <Avatar
@@ -76,7 +52,7 @@ const UserItems = () => {
                     bottom: 7, 
                     right: 7}}/>
                     }</Box>
-                    <span style = {{fontSize: 17}}>{user.name}</span> 
+                    <span style = {{fontSize: 14.5, fontFamily: 'Verdana'}}>{user.name}</span> 
                 </Link>))}
             <List>
                <ListItem disablePadding>

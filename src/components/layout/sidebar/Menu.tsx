@@ -13,7 +13,7 @@ const Menu = () => {
   return (
     <Card sx = {{
         padding: 2,
-        backgroundColor: '#F6F6F6'
+        backgroundColor: '#F6F6F6',
     }}>
     <List>
         {menu.map(item => (
