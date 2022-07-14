@@ -29,7 +29,7 @@ const AddPost: FC <IAddPost> = ({setPosts}) => {
  return (
     <Box sx ={{
         border: '1px solid #ccc',
-        borderRadius: '10px',
+        borderRadius: '70px',
     }}
     >
     <TextField 
